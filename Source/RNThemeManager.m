@@ -104,11 +104,11 @@ NSString * const RNThemeManagerDidChangeThemes = @"RNThemeManagerDidChangeThemes
     NSString *fontName = self.styles[key];
     NSString *size = self.styles[sizeKey];
     
-    while (self.styles[fontName]) {
+    if (self.styles[fontName]) {
         fontName = self.styles[fontName];
     }
     
-    while (self.styles[size]) {
+    if (self.styles[size]) {
         size = self.styles[size];
     }
     
@@ -123,7 +123,7 @@ NSString * const RNThemeManagerDidChangeThemes = @"RNThemeManagerDidChangeThemes
 - (UIColor *)colorForKey:(NSString *)key {
     NSString *hexString = self.styles[key];
     
-    while (self.styles[hexString]) {
+    if (self.styles[hexString]) {
         hexString = self.styles[hexString];
     }
     
@@ -138,7 +138,7 @@ NSString * const RNThemeManagerDidChangeThemes = @"RNThemeManagerDidChangeThemes
 - (UIImage *)imageForKey:(NSString *)key {
     NSString *imageName = self.styles[key];
     
-    while (self.styles[imageName]) {
+    if (self.styles[imageName]) {
         imageName = self.styles[imageName];
     }
     
